@@ -1,0 +1,14 @@
+apply plugin: 'maven-publish'
+
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId "com.example"
+                artifactId "payments"
+                version = "dc920de3598a583f39a0fb7c1ea022e5075585e6"
+            }
+        }
+    }
+}
